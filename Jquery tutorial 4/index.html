@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>First jQuery Example</title>
+     
+      
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("h1").css("background-color", "yellow");
+            $("p").css("background-color", "yellow");
+            $("textarea").css("background-color", "yellow");
+
+        });
+
+        $(document).ready(function () {
+            $('#myCheckbox').click(function () {
+                $('#myButton').prop("disabled", !$("#myCheckbox").prop("checked"))
+            })
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <h3>QUE:1</h3>
+    <h1>this is a first header</h1>
+    <p>The first paragraph is selected.</p>
+    <p>The second paragraph is selected.</p>
+    <textarea></textarea>
+    <br>
+    <h3>QUE:2</h3>
+
+    <div>
+        <label for="myCheckbox"><input id="myCheckbox" type="checkbox" />I Agree</lable>
+            <br>
+            <button id="myButton" disabled>Submit</button>
+    </div>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+
+<html>
+<br>
+<h3>QUE:3</h3>
+
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+
+    </script>
+
+    <script>
+
+        $(document).ready(function() {
+
+            $("#button3").click(function() {
+
+                $("img").attr({ width: "500px", height: "300px" });
+
+            });
+
+        });
+
+        $(document).ready(function(){
+            $("#button1").click(function(){
+             $("p1").html("Hello <b>world!</b>");
+            });
+        });
+
+        $(document).ready(function(){
+           $("#copyButton").click(function(){
+    // Get the text of the original p tag
+              var originalText = $("#original").text();
+    // Create a new p tag with the same text
+              var newPTag = $("<p>"+originalText+"</p>");
+    // Append the new p tag to the target div
+              $("#target").append(newPTag);
+            });
+        });
+
+        $(document).ready(function(){
+          $("#animateButton").click(function(){
+          var boxWidth = 100;
+          var boxHeight = 100;
+          var widthIncrement = 10;
+          var heightIncrement = 10;
+          var animationInterval = setInterval(function(){
+          boxWidth += widthIncrement;
+          boxHeight += heightIncrement;
+          $("#animatedBox").css("background-color", "blue");
+          $("#animatedBox").css("width","200px");
+          $("#animatedBox").css("height","200px");
+
+
+          
+          $("#animatedBox").css("width", boxWidth+"px");
+          $("#animatedBox").css("height", boxHeight+"px");
+          if (boxWidth >= 200 || boxHeight >= 200) {
+            widthIncrement = -10;
+            heightIncrement = -10;
+           }
+          if (boxWidth <= 100 || boxHeight <= 100) {
+            widthIncrement = 10;
+            heightIncrement = 10;
+           }
+           }, 100);
+          });
+        });
+
+        $(document).ready(function(){
+           $("#hideButton").click(function(){
+           $("#text1").hide();
+           });
+           $("#showButton").click(function(){
+           $("#text1").show();
+           });
+        });
+
+        $(document).ready(function(){
+           $("#fadeInButton").click(function(){
+           $("#text").fadeIn();
+          });
+           $("#fadeOutButton").click(function(){
+           $("#text").fadeOut();
+          });
+           $("#fadeToggleButton").click(function(){
+           $("#text").fadeToggle();
+          });
+           $("#fadeToButton").click(function(){
+           $("#text").fadeTo("slow", 0.5);
+          });
+        });
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+     
+      
+    
+    <img src="./anton-2.jpg" alt="Website" width="100px" height="100px"><br>
+
+    <button id="button3">Set image width to 500px and height to 300px</button>
+    <br>
+    
+    
+    <h3>QUE:4</h3>
+    <button id="button1">Change content of all p elements</button>
+    <br>
+
+    <p1>This is a paragraph.</p1>
+    <p1>This is another paragraph.</p1>
+    <br>
+    <h3>QUE:5</h3>
+    <p2 id="original">This is the original text</p2>
+    <div id="target"></div>
+    <button id="copyButton">Copy</button>
+    <br>
+    <h3>QUE:6</h3>
+    <a href="./webpage.html">view</a>
+    <br>
+    <h3>QUE:7</h3>
+    <a href="./loginpage.htm">view</a>
+    <br>
+    <h3>QUE:8</h3>
+    <div id="animatedBox"></div>
+    <br>
+    <button id="animateButton">Animate</button>
+    <br>
+    <h3>QUE:9</h3>
+    <p4 id="text1">This is the text that will be hidden and shown</p4>
+    <button id="hideButton">Hide</button>
+    <button id="showButton">Show</button>
+    <br>
+    <h3>QUE:10</h3>
+    <p5 id="text">This is the text that will be faded</p5>
+    <br>
+    <button id="fadeInButton">Fade In</button>
+    <button id="fadeOutButton">Fade Out</button>
+    <button id="fadeToggleButton">Fade Toggle</button>
+    <button id="fadeToButton">Fade To</button>
+    <br>
+    <br>
+
+
+
+</body>
+
+</html>

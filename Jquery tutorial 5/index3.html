@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Engineering College Menu</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#menu" ).menu();
+  } );
+  </script>
+</head>
+<body>
+    <style>
+        body{
+            width: 800px;
+            height: auto;
+        }
+        #ul{
+            width: auto;
+            height: cover;
+        }
+        #li{
+            width: auto;
+            height: cover;
+        }
+    </style>
+       
+ 
+<ul id="menu">
+  <li class="ui-state-disabled">Department Subjects</li>
+  <li>
+    Computer Engineering
+    <ul>
+      <li>Semester 1
+        <ul>
+          <p>Programming Fundamentals</p>
+          <p>Data Structures and Algorithms</p>
+        </ul>
+      </li>
+      <li>Semester 2
+        <ul>
+          <p>Computer Networks</p>
+          <p>Database Systems</p>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    Electrical Engineering
+    <ul>
+      <li>Semester 1
+        <ul>
+          <p>Circuits and Systems</p>
+          <p>Signals and Systems</p>
+        </ul>
+      </li>
+      <li>Semester 2
+        <ul>
+          <p>Electromagnetic Theory</p>
+          <p>Control Systems</p>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+ 
+</body>
+</html>

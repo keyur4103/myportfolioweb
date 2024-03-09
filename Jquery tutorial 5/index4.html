@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Widgets: Autocomplete, Button, and Selectmenu</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        // Autocomplete
+        $(function () {
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
+            $("#tags").autocomplete({
+                source: availableTags
+            });
+        });
+
+        // Button
+        $(function () {
+            $("input[type=submit], a, button")
+                .button()
+                .click(function (event) {
+                    event.preventDefault();
+                });
+        });
+
+        // Selectmenu
+        $(function () {
+            $("#speed").selectmenu();
+        });
+    </script>
+</head>
+
+<body>
+
+    <h2>Autocomplete</h2>
+    <div class="ui-widget">
+        <label for="tags">Tags: </label>
+        <input id="tags">
+    </div>
+    <br>
+
+    <h2>Button</h2>
+    <button>A button element</button>
+    <input type="submit" value="A submit button">
+    <a href="#">A link button</a>
+    <br>
+    <br>
+
+    <h2>Selectmenu</h2>
+    <label for="speed">Select a speed:</label>
+    <select name="speed" id="speed">
+        <option>Slower</option>
+        <option>Slow</option>
+        <option selected>Medium</option>
+        <option>Fast</option>
+        <option>Faster</option>
+    </select>
+    <br>
+
+</body>
+
+</html>

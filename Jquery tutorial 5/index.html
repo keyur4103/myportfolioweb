@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>jQuery tutorial 5</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script>
+
+        $(function () {
+
+            $("#tabs").tabs();
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <style>
+        #tabs {
+            width: auto;
+            margin: 0 auto;
+            color: white;
+        }
+    </style>
+    <h3>QUE:1</h3>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1" target="_blank">MERN Technology</a></li>
+            <li><a href="#tabs-2" target="_blank">Data Science</a></li>
+            <li><a href="#tabs-3" target="_blank">Server Side Scripting language</a></li>
+        </ul>
+        <div id="tabs-1">
+            <p>Subjects:</p>
+
+            <ul>
+                <li>1. MongoDB-document database</li>
+                <li>2. Express(.js)-Node.js web framework</li>
+                <li>3. React(.js)-a client-side javascript framework</li>
+                <li>4. Node(.js)-the premire javascript web server</li>
+            </ul>
+        </div>
+
+        <div id="tabs-2">
+            <p>Subjects:</p>
+
+            <ul>
+                <li>1. Statistics-the study of collecting, analyzing, and interpreting data.</li>
+                <li>2. Big Data-extremely large datasets that may be analyzed for insights and trends.</li>
+                <li>3. Data Visualization-the representation of data in a graphical or pictorial form.</li>
+                <li>4. Database Management-the organization, storage, and retrieval of data in a database.</li>
+            </ul>
+        </div>
+        <div id="tabs-3">
+            <p>Subjects:</p>
+
+            <ul>
+                <li>PHP: a server-side scripting language used for web development.</li>
+                <li>Node.js: a server-side JavaScript runtime environment for building fast and scalable web
+                    applications.</li>
+                <li>Python: a server-side scripting language used for web development, scientific computing, and more.
+                </li>
+                <li>Java: a server-side programming language commonly used for building enterprise-level applications.
+                </li>
+            </ul>
+
+
+
+        </div>
+    </div>
+
+</body>
